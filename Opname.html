@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabel Jurnal - Dark Mode Colorful</title>
+    <link rel="stylesheet" href="https://code.jquery.com/jquery-3.6.0.min.js">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212; /* Dark background */
+            color: #e0e0e0; /* Light text color */
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        th, td {
+            padding: 12px;
+            text-align: center;
+            border: 1px solid #444; /* Darker border */
+        }
+        th {
+            background-color: #1f1f1f; /* Dark header */
+            color: #ffffff;
+        }
+        .colorful {
+            background-color: #ffeb3b; /* Yellow */
+        }
+        .colorful:nth-child(even) {
+            background-color: #f44336; /* Red */
+        }
+        .colorful:nth-child(3n) {
+            background-color: #4caf50; /* Green */
+        }
+        .colorful:nth-child(3n+1) {
+            background-color: #2196f3; /* Blue */
+        }
+        .colorful:nth-child(3n+2) {
+            background-color: #ff9800; /* Orange */
+        }
+        .colorful:hover {
+            background-color: #42a5f5; /* Light Blue on hover */
+        }
+        .total {
+            background-color: #ff5252; /* Total row color */
+            font-weight: bold;
+        }
+        .button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #6200ea; /* Button color */
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background-color: #3700b3; /* Button hover color */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Jurnal</h1>
+    <table id="jurnalTable">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Kode Barang</th>
+                <th>Nama Barang</th>
+                <th>Satuan</th>
+                <th>Harga Pokok</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="colorful">
+                <td>1</td>
+                <td>A-001</td>
+                <td>Sendok</td>
+                <td>Buah</td>
+                <td>20.000</td>
+            </tr>
+            <tr class="colorful">
+                <td>2</td>
+                <td>A-002</td>
+                <td>Gelas</td>
+                <td>Buah</td>
+                <td>15.000</td>
+            </tr>
+            <tr class="colorful">
+                <td>3</td>
+                <td>A-003</td>
+                <td>Cangkir</td>
+                <td>Buah</td>
+                <td>18.000</td>
+            </tr>
+            <tr class="colorful">
+                <td>4</td>
+                <td>A-004</td>
+                <td>Mangkok</td>
+                <td>Buah</td>
+                <td>25.000</td>
+            </tr>
+            <tr class="colorful">
+                <td>5</td>
+                <td>A-005</td>
+                <td>Rice Cooker</td>
+                <td>Dus</td>
+                <td>500.000</td>
+            </tr>
+            <tr class="colorful">
+                <td>6</td>
+                <td>A-006</td>
+                <td>Minyak Goreng</td>
+                <td>Dus</td>
+                <td>70.000</td>
+            </tr>
+            <tr class="colorful">
+                <td>7</td>
+                <td>A-007</td>
+                <td>Kopi</td>
+                <td>Kg</td>
+                <td>80.000</td>
+            </tr>
+            <tr class="colorful">
+                <td>8</td>
+                <td>A-008</td>
+                <td>Teh</td>
+                <td>Kg</td>
+                <td>50.000</td>
+            </tr>
+            <tr class="colorful">
+                <td>9</td>
+                <td>A-009</td>
+                <td>Gula</td>
+                <td>Kg</td>
+                <td>30.000</td>
+            </tr>
+            <tr class="colorful">
+                <td>10</td>
+                <td>A-010</td>
+                <td>Susu</td>
+                <td>Dus</td>
+                <td>100.000</td>
+            </tr>
+            <tr class="total">
+                <td colspan="4">TOTAL</td>
+                <td>1.000.000</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <button class="button" id="changeColor">Change to Colorful</button>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#changeColor').click(function() {
+                $('#jurnalTable tbody tr').toggleClass('colorful');
+            });
+        });
+    </script>
+
+</body>
+</html>

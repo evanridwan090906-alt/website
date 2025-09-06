@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laporan Stock Opname - PT. ABC</title>
+    <link rel="stylesheet" href="https://code.jquery.com/jquery-3.6.0.min.js">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0; /* Latar Belakang */
+            color: #333; /* Warna Teks */
+            margin: 0;
+            padding: 20px;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            padding: 12px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #4CAF50; /* Warna Header */
+            color: white;
+        }
+        .colorful {
+            background-color: #e1f5fe; /* Warna Dasar */
+        }
+        .colorful:nth-child(even) {
+            background-color: #b3e5fc; /* Warna Alternatif */
+        }
+        .total {
+            background-color: #ffccbc; /* Total Row Color */
+            font-weight: bold;
+        }
+        .button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #2196f3; /* Tombol Color */
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background-color: #1976d2; /* Tombol Hover Color */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>LAPORAN STOCK OPNAME BARANG PT. ABC</h1>
+    <h2>Periode 1-31 Agustus 2021</h2>
+    <table id="stockTable">
+        <thead>
+            <tr>
+                <th>Harga Jual</th>
+                <th colspan="2">Stok Awal</th>
+                <th colspan="2">Penjualan</th>
+                <th colspan="2">Barang Masuk</th>
+                <th colspan="2">Total</th>
+                <th>Catatan</th>
+            </tr>
+            <tr>
+                <th></th>
+                <th>Jumlah</th>
+                <th>Nilai</th>
+                <th>Jumlah</th>
+                <th>Nilai</th>
+                <th>Jumlah</th>
+                <th>Nilai</th>
+                <th>Jumlah</th>
+                <th>Nilai</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Contoh Data -->
+            <tr class="colorful">
+                <td>25.000</td>
+                <td>20</td>
+                <td>400.000</td>
+                <td>7</td>
+                <td>175.000</td>
+                <td>0</td>
+                <td>0</td>
+                <td>20</td>
+                <td>400.000</td>
+                <td></td>
+            </tr>
+            <tr class="colorful">
+                <td>40.000</td>
+                <td>20</td>
+                <td>800.000</td>
+                <td>12</td>
+                <td>480.000</td>
+                <td>0</td>
+                <td>0</td>
+                <td>20</td>
+                <td>800.000</td>
+                <td></td>
+            </tr>
+            <tr class="colorful">
+                <td>60.000</td>
+                <td>30</td>
+                <td>1.800.000</td>
+                <td>6</td>
+                <td>360.000</td>
+                <td>0</td>
+                <td>0</td>
+                <td>30</td>
+                <td>1.800.000</td>
+                <td></td>
+            </tr>
+            <tr class="colorful">
+                <td>100.000</td>
+                <td>10</td>
+                <td>1.000.000</td>
+                <td>4</td>
+                <td>400.000</td>
+                <td>0</td>
+                <td>0</td>
+                <td>10</td>
+                <td>1.000.000</td>
+                <td></td>
+            </tr>
+            <tr class="colorful">
+                <td>200.000</td>
+                <td>5</td>
+                <td>1.000.000</td>
+                <td>3</td>
+                <td>600.000</td>
+                <td>0</td>
+                <td>0</td>
+                <td>5</td>
+                <td>1.000.000</td>
+                <td></td>
+            </tr>
+            <!-- Tambahkan lebih banyak data sesuai kebutuhan -->
+            <tr class="colorful">
+                <td>150.000</td>
+                <td>15</td>
+                <td>2.250.000</td>
+                <td>8</td>
+                <td>1.200.000</td>
+                <td>2</td>
+                <td>300.000</td>
+                <td>15</td>
+                <td>2.250.000</td>
+                <td></td>
+            </tr>
+            <tr class="colorful">
+                <td>75.000</td>
+                <td>25</td>
+                <td>1.875.000</td>
+                <td>15</td>
+                <td>1.125.000</td>
+                <td>5</td>
+                <td>375.000</td>
+                <td>25</td>
+                <td>1.875.000</td>
+                <td></td>
+            </tr>
+            <tr class="colorful">
+                <td>30.000</td>
+                <td>40</td>
+                <td>1.200.000</td>
+                <td>20</td>
+                <td>600.000</td>
+                <td>10</td>
+                <td>300.000</td>
+                <td>40</td>
+                <td>1.200.000</td>
+                <td></td>
+            </tr>
+            <tr class="colorful">
+                <td>50.000</td>
+                <td>50</td>
+                <td>2.500.000</td>
+                <td>25</td>
+                <td>1.250.000</td>
+                <td>15</td>
+                <td>750.000</td>
+                <td>50</td>
+                <td>2.500.000</td>
+                <td></td>
+            </tr>
+            <tr class="colorful">
+                <td>80.000</td>
+                <td>10</td>
+                <td>800.000</td>
+                <td>5</td>
+                <td>400.000</td>
+                <td>2</td>
+                <td>160.000</td>
+                <td>10</td>
+                <td>800.000</td>
+                <td></td>
+            </tr>
+            <tr class="total">
+                <td>300</td>
+                <td>14.100.000</td>
+                <td>137</td>
+                <td>7.055.000</td>
+                <td>450</td>
+                <td>21.150.000</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <button class="button" id="changeColor">Change to Colorful</button>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#changeColor').click(function() {
+                $('#stockTable tbody tr').toggleClass('colorful');
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabel Persediaan Akhir</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #000;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #e0e0e0;
+        }
+        caption {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .colorful {
+            background-color: #ffcccb; /* Light red */
+        }
+        .colorful:nth-child(even) {
+            background-color: #add8e6; /* Light blue */
+        }
+        .colorful:nth-child(odd) {
+            background-color: #90ee90; /* Light green */
+        }
+        .colorful:nth-child(3n) {
+            background-color: #ffeb3b; /* Yellow */
+        }
+        .colorful:nth-child(4n) {
+            background-color: #ffb6c1; /* Light pink */
+        }
+    </style>
+</head>
+<body>
+    <button id="changeColorButton">Change to Colorful</button>
+    <table id="persediaanTable">
+        <caption>Persediaan Akhir (Nilai pada Persediaan di Gudang)</caption>
+        <thead>
+            <tr>
+                <th colspan="2">Jumlah</th>
+                <th colspan="2">Nilai</th>
+                <th colspan="2">Selisih</th>
+                <th>Keterangan</th>
+            </tr>
+            <tr>
+                <th>Jumlah</th>
+                <th>Nilai</th>
+                <th>Jumlah</th>
+                <th>Nilai</th>
+                <th>Jumlah</th>
+                <th>Nilai</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>43</td>
+                <td>860,000</td>
+                <td>42</td>
+                <td>840,000</td>
+                <td>-1</td>
+                <td>-20,000</td>
+                <td>Hilang</td>
+            </tr>
+            <tr>
+                <td>38</td>
+                <td>760,000</td>
+                <td>37</td>
+                <td>740,000</td>
+                <td>-1</td>
+                <td>-20,000</td>
+                <td>Hilang</td>
+            </tr>
+            <tr>
+                <td>36</td>
+                <td>720,000</td>
+                <td>35</td>
+                <td>700,000</td>
+                <td>-1</td>
+                <td>-20,000</td>
+                <td>Hilang</td>
+            </tr>
+            <tr>
+                <td>38</td>
+                <td>760,000</td>
+                <td>37</td>
+                <td>740,000</td>
+                <td>-1</td>
+                <td>-20,000</td>
+                <td>Hilang</td>
+            </tr>
+            <tr>
+                <td>39</td>
+                <td>780,000</td>
+                <td>38</td>
+                <td>760,000</td>
+                <td>-1</td>
+                <td>-20,000</td>
+                <td>Hilang</td>
+            </tr>
+            <tr>
+                <td>40</td>
+                <td>800,000</td>
+                <td>39</td>
+                <td>780,000</td>
+                <td>-1</td>
+                <td>-20,000</td>
+                <td>Hilang</td>
+            </tr>
+            <tr>
+                <td>41</td>
+                <td>820,000</td>
+                <td>40</td>
+                <td>800,000</td>
+                <td>-1</td>
+                <td>-20,000</td>
+                <td>Hilang</td>
+            </tr>
+            <tr>
+                <td>42</td>
+                <td>840,000</td>
+                <td>41</td>
+                <td>820,000</td>
+                <td>-1</td>
+                <td>-20,000</td>
+                <td>Hilang</td>
+            </tr>
+            <tr>
+                <td>43</td>
+                <td>860,000</td>
+                <td>42</td>
+                <td>840,000</td>
+                <td>-1</td>
+                <td>-20,000</td>
+                <td>Hilang</td>
+            </tr>
+            <tr>
+                <td>44</td>
+                <td>880,000</td>
+                <td>43</td>
+                <td>860,000</td>
+                <td>-1</td>
+                <td>-20,000</td>
+                <td>Hilang</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="4">Total</td>
+                <td>29,725,000</td>
+                <td>195,000</td>
+                <td></td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <script>
+        document.getElementById('changeColorButton').addEventListener('click', function() {
+            const rows = document.querySelectorAll('#persediaanTable tbody tr');
+            rows.forEach((row, index) => {
+                row.classList.toggle('colorful', true);
+            });
+        });
+    </script>
+</body>
+</html>
