@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Sederhana</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #0f345c;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+        nav {
+            background-color: #f1f1f1;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 10px 0;
+        }
+        nav a {
+            text-decoration: none;
+            color: #0a488a;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #0056b3;
+        }
+        main {
+            text-align: center;
+            padding: 20px;
+        }
+        .btn-alert {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        .btn-bg {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        .btn-alert:hover {
+            background-color: #0056b3;
+        }
+        .btn-bg:hover {
+            background-color: #044111;
+        }
+        footer {praktik
+            background-color: #1d0c7e;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Selamat Datang di Website Fazra Fatimah Azahra</h1>
+    </header>
+
+    <nav>
+        <a href="https://fazrafatimah5-ui.github.io/fazra1.github.io/praktik.html">laporanStok</a>
+        <a href="https://github.com/fazrafatimah5-ui/fazra1.github.io/commit/e2bbf3c83434deb0a767b515386d35e3684db063">Profil Pribadi</a>
+        <a href="file:///C:/Users/Thinkpad%20X260/Documents/PWD/latihan2D.html">Pengalaman</a>
+    </nav>        
+
+    <main>
+        <h2>Fitur Interaktif</h2>
+        <p>Silakan coba tombol berikut:</p>
+
+        <button class="btn-alert" onclick="showAlert()">Klik Saya</button>
+        <button class="btn-bg" onclick="changeBackground()">Ganti Background</button>
+        <br><br>
+        <a href="https://www.google.com" target="_blank">Kunjungi Google</a>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Website Sederhana</p>
+    </footer>
+
+    <script>
+        function showAlert() {
+            alert("Halo! Selamat datang di Website kami.");
+        }
+
+        function changeBackground() {
+            const colors = ["#f9f9f9", "#ffe0b2", "#c8e6c9", "#bbdefb", "#f8bbd0"];
+            document.body.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+        }
+    </script>
+
+</body>
+</html>
