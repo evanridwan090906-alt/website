@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="style.css" />
+<title>Laporan Stok Barang</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<div id="main-container">
+  <h2>LAPORAN STOK BARANG PT ABC</h2>
+  <p style="text-align:center;">Periode 1 - 31 Oktober 2024</p>
+
+  <div id="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>Kode Barang</th>
+          <th>Nama Barang</th>
+          <th>Harga Barang</th>
+          <th>Stok Awal</th>
+          <th>1-Oct Masuk</th>
+          <th>1-Oct Keluar</th>
+          <th>2-Oct Masuk</th>
+          <th>2-Oct Keluar</th>
+          <th>3-Oct Masuk</th>
+          <th>3-Oct Keluar</th>
+          <th>4-Oct Masuk</th>
+          <th>4-Oct Keluar</th>
+          <th>5-Oct Masuk</th>
+          <th>5-Oct Keluar</th>
+          <th>Sisa Stok</th>
+          <th>Nilai Persediaan Akhir</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td><td>BJ001</td><td>Kemeja Polos Pria</td><td>Rp 80,000</td><td>100</td>
+          <td>30</td><td>20</td><td>0</td><td>10</td><td>0</td><td>5</td><td>50</td><td>0</td><td>10</td><td>5</td>
+          <td>150</td><td>Rp 12,000,000</td>
+        </tr>
+        <tr>
+          <td>2</td><td>BJ002</td><td>Blouse Wanita</td><td>Rp 90,000</td><td>80</td>
+          <td>1</td><td>10</td><td>20</td><td>5</td><td>10</td><td>15</td><td>0</td><td>10</td><td>5</td><td>0</td>
+          <td>96</td><td>Rp 8,640,000</td>
+        </tr>
+        <tr>
+          <td>3</td><td>BJ003</td><td>Celana Jeans Pria</td><td>Rp 150,000</td><td>50</td>
+          <td>10</td><td>5</td><td>0</td><td>0</td><td>20</td><td>10</td><td>10</td><td>5</td><td>10</td><td>0</td>
+          <td>120</td><td>Rp 18,000,000</td>
+        </tr>
+        <tr>
+          <td>4</td><td>BJ004</td><td>Rok Mini Wanita</td><td>Rp 110,000</td><td>60</td>
+          <td>5</td><td>10</td><td>5</td><td>10</td><td>0</td><td>20</td><td>20</td><td>10</td><td>5</td><td>0</td>
+          <td>75</td><td>Rp 8,250,000</td>
+        </tr>
+        <tr>
+          <td>5</td><td>BJ005</td><td>Jaket Denim Pria</td><td>Rp 220,000</td><td>40</td>
+          <td>0</td><td>5</td><td>0</td><td>0</td><td>10</td><td>10</td><td>5</td><td>5</td><td>10</td><td>0</td>
+          <td>50</td><td>Rp 11,000,000</td>
+        </tr>
+        <tr>
+          <td>6</td><td>BJ006</td><td>Dress Midi Wanita</td><td>Rp 120,000</td><td>30</td>
+          <td>0</td><td>0</td><td>0</td><td>0</td><td>5</td><td>5</td><td>0</td><td>5</td><td>5</td><td>0</td>
+          <td>20</td><td>Rp 2,400,000</td>
+        </tr>
+        <tr>
+          <td>7</td><td>BJ007</td><td>Tank Top Pria</td><td>Rp 50,000</td><td>100</td>
+          <td>0</td><td>0</td><td>0</td><td>0</td><td>50</td><td>0</td><td>0</td><td>0</td><td>50</td><td>0</td>
+          <td>100</td><td>Rp 5,000,000</td>
+        </tr>
+        <tr>
+          <td>8</td><td>BJ008</td><td>Sweater Kasual Wanita</td><td>Rp 180,000</td><td>70</td>
+          <td>0</td><td>10</td><td>0</td><td>5</td><td>50</td><td>10</td><td>0</td><td>10</td><td>10</td><td>0</td>
+          <td>95</td><td>Rp 17,100,000</td>
+        </tr>
+        <tr>
+          <td>9</td><td>BJ009</td><td>Kemeja Kerja Pria</td><td>Rp 130,000</td><td>20</td>
+          <td>0</td><td>5</td><td>0</td><td>5</td><td>0</td><td>5</td><td>50</td><td>10</td><td>0</td><td>0</td>
+          <td>20</td><td>Rp 2,600,000</td>
+        </tr>
+        <tr>
+          <td>10</td><td>BJ010</td><td>Cardigan Wanita</td><td>Rp 160,000</td><td>40</td>
+          <td>0</td><td>5</td><td>0</td><td>0</td><td>5</td><td>10</td><td>0</td><td>5</td><td>10</td><td>5</td>
+          <td>20</td><td>Rp 3,200,000</td>
+        </tr>
+      </tbody>
+    </table>
+    <button>Change to Colorfull</button>
+  </div>
+</div>
+
+<script>
+$(document).ready(function () {
+  colorLess();
+
+  $("button").click(function () {
+    var textButton = $("button").text();
+    if (textButton == "Change to Colorfull") {
+      $(this).text("Change to Colorless");
+      colorFull();
+    } else {
+      $(this).text("Change to Colorfull");
+      colorLess();
+    }
+  });
+
+  function colorLess() {
+    $("thead").css("background", "black");
+    $("thead").css("color", "white");
+    $("tbody tr:even").css("background", "#CCCCCC");
+    $("tbody tr:even").css("color", "black");
+    $("tbody tr:nth-child(2)").css("background", "white");
+    $("tbody tr:nth-child(2)").css("color", "black");
+    $("button").css("background", "#CCCCCC");
+    $("button").css("color", "black");
+  }
+
+  function colorFull() {
+    $("thead").css("background", "red");
+    $("thead").css("color", "white");
+    $("tbody tr:even").css("background", "blue");
+    $("tbody tr:even").css("color", "white");
+    $("tbody tr:nth-child(2)").css("background", "yellow");
+    $("tbody tr:nth-child(2)").css("color", "black");
+    $("button").css("background", "red");
+    $("button").css("color", "white");
+  }
+});
+</script>
+</body>
+</html>
